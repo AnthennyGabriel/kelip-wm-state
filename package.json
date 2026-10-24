@@ -1,0 +1,13 @@
+{
+  "name": "kelip-wm-state",
+  "version": "1.0.0",
+  "private": true,
+  "description": "世界模型综述与模块学习库：可部署的静态网站",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "build": "node scripts/build.mjs",
+    "start": "node scripts/serve.mjs",
+    "preview:pages": "node scripts/serve.mjs --base=/kelip-wm-state/"
+  }
+}
