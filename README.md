@@ -161,6 +161,10 @@ GitHub Pages、Vercel、Netlify 等平台可使用 `npm run build`，产物在 `
 | 动作生成基础 | [Diffusion Policy](https://diffusion-policy.cs.columbia.edu/) | 条件去噪、动作块与滚动执行 |
 | 生成式建模基础 | [Flow Matching for Generative Modeling](https://arxiv.org/abs/2210.02747) | 概率路径与速度场 |
 
+## 模块讲解与文献依据
+
+专题页逐项区分基础文献、世界模型中的具体实现、配图读法和原作者笔记。观测、编码器、后验、先验、VAE、重参数化、KL、RSSM、tokenizer、隐动作和 VQ 共 11 个专题已加入专门机制讲解与逐图说明；其余专题提供按论文筛选的来源段落，并标明尚待补充的推导。详见 [内容与证据规范](docs/CONTENT-STANDARD.md)。
+
 ## 范围、来源与后续建设
 
 当前已实现：原始展示保留、关键原图模块交互、双入口学习结构、专题与实验、状态恢复、响应式导航及静态部署。构建检查覆盖144页、85个专题和媒体引用；浏览器检查覆盖子目录资源、模块深入与返回、滚轮、目录定位和视频分段读取。

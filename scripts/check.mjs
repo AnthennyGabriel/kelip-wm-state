@@ -39,6 +39,15 @@ export function check(){
   Object.assign(context,context.window);
   for(const name of ['knowledge.js','figure-map.js'])vm.runInContext(fs.readFileSync(path.join(site,name),'utf8'),context,{filename:name});
   const data=context.window.WM_DATA,modules=context.window.WM_LESSONS.modules,knowledge=context.window.WM_KNOWLEDGE,figures=context.window.WM_FIGURES;
+  vm.runInContext(fs.readFileSync(path.join(site,'module-scholar.js'),'utf8'),context,{filename:'module-scholar.js'});
+  const readings=context.window.WM_SCHOLAR,readingFigures=context.window.WM_SCHOLAR_FIGURES;
+  for(const [id,reading] of Object.entries(readings)){
+    if(!modules[id])problems.push('Unknown scholarly topic '+id);
+    for(const key of reading.figures)if(!readingFigures[key])problems.push('Missing scholarly figure '+key);
+    for(const [,url] of reading.refs)if(!/^https:\/\//.test(url))problems.push('Invalid scholarly reference '+id);
+    for(const match of JSON.stringify(reading.sections).matchAll(/\[(\d+)\]/g))if(+match[1]>reading.refs.length)problems.push('Unresolved citation in '+id);
+  }
+  for(const [key,figure] of Object.entries(readingFigures))if(!existsExact(path.join(site,figure.src)))problems.push('Missing scholarly figure asset '+key);
   if(data.length!==4||data.reduce((sum,c)=>sum+c.slides.length,0)!==144)problems.push('Expected four chapters and 144 slides');
   let mediaCount=0;
   data.forEach((chapter,i)=>{
