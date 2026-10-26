@@ -4,6 +4,10 @@
 
 保留144页原始展示，附24项代表工作、85个专题、可点击模块和分步讲解。支持滚轮翻页，目录自动将当前页高亮并居中。网页是静态文件，部署后不需要Node.js服务器或数据库。
 
+**在线地址：[世界模型 · 可视化学习地图](https://anthennygabriel.github.io/kelip-wm-state/)**
+
+本仓库已于 2026-10-26 启用 GitHub Pages 并成功发布，HTTPS 已开启。[发布记录](https://github.com/AnthennyGabriel/kelip-wm-state/actions/runs/40257152071)。使用 GitHub Free 的公开仓库托管，无需购买域名或服务器，也不依赖本机持续开机。[GitHub Pages 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)
+
 ## 在这个仓库部署到 GitHub Pages
 
 1. 将本项目提交到 `AnthennyGabriel/kelip-wm-state` 的 `main` 分支。
@@ -11,11 +15,11 @@
 3. 打开 **Actions → Check and deploy website → Run workflow**，选择 `main` 后运行。
 4. 等待 `build` 和 `deploy` 都成功；访问 Actions 部署结果中的网址。
 
-默认仓库名和账号不变时，预期网址为：
+本仓库的固定网址为：
 
 **https://anthennygabriel.github.io/kelip-wm-state/**
 
-该地址是预期部署地址，不表示已发布成功。每次推送或提交PR会自动做构建检查；正式发布通过 Run workflow 手动触发。更新内容后，再运行一次即可发布新版本。无需自行创建密钥或添加token。
+每次推送或提交PR会自动做构建检查；正式发布通过 Run workflow 手动触发。当前仓库已完成设置，之后更新内容只需提交到 main，再执行步骤 3–4 即可发布新版本。无需自行创建密钥或添加token。
 
 ## 本地查看
 

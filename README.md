@@ -12,7 +12,7 @@
 ![Static website](https://img.shields.io/badge/Architecture-Static_Web-0071e3?style=flat-square)
 ![Language](https://img.shields.io/badge/Language-中文-18233a?style=flat-square)
 
-[项目概述](#项目概述) · [动态演示](#动态演示) · [学习路线](#学习路线) · [参考文献](#参考文献) · [本地运行与部署](#本地运行与部署)
+[**在线学习 ↗**](https://anthennygabriel.github.io/kelip-wm-state/) · [项目概述](#项目概述) · [动态演示](#动态演示) · [学习路线](#学习路线) · [参考文献](#参考文献) · [本地运行与部署](#本地运行与部署)
 
 </div>
 
@@ -146,7 +146,7 @@ npm start
 
 GitHub Pages、Vercel、Netlify 等平台可使用 `npm run build`，产物在 `dist/`。每次推送自动检查，GitHub Pages 正式发布通过 **Run workflow** 手动触发。完整操作见 **[部署指南](docs/DEPLOYMENT.md)**。
 
-> 当前 README 不将预期域名当作已上线地址；发布结果以仓库 Actions 的部署状态为准。
+已部署到 **[GitHub Pages 在线网站](https://anthennygabriel.github.io/kelip-wm-state/)**，使用免费的公开仓库托管和 HTTPS，无需保持本地电脑运行。[首次发布记录（2026-10-26）](https://github.com/AnthennyGabriel/kelip-wm-state/actions/runs/40257152071)。更新网站内容后，通过 **Run workflow** 发布新版本。
 
 ## 参考文献
 
